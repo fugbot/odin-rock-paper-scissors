@@ -1,0 +1,10 @@
+.results {
+    background-color: lightblue;
+    font-size: 18px;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.results h1{
+    color: white;
+}

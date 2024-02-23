@@ -1,7 +1,32 @@
 // console.log("hello world 2");
 
+const rock = document.querySelector(".rock");
+const paper = document.querySelector(".paper");
+const scissors = document.querySelector(".scissors");
+const btns = document.querySelectorAll("button");
+
+btns.forEach((btn) => {
+    /* btn.addEventListener("click", () => {
+        const selection = btn.getAttribute('class');
+        console.log(selection);
+        //playRound(player, computer);
+    
+    }); */
+
+    btn.addEventListener("click", () => {
+        const playerSelection = btn.className;
+        const computerSelection = getComputerChoice();
+        // console.log("player" + typeof playerSelection);
+        // console.log("comp" + typeof computerSelection);
+        playRound(playerSelection, computerSelection);
+    });
+});
+
+const results = document.querySelector(".results");
+
+
 function getComputerChoice(){
-    const options = ["Rock", "Paper", "Scissors"];
+    const options = ["rock", "paper", "scissors"];
     let choice = options[Math.floor(Math.random()*options.length)];
     // console.log(choice);
     return choice;
@@ -11,26 +36,22 @@ function playRound(playerSelection, computerSelection){
 
     console.log("Player: " + playerSelection + " Computer: " + computerSelection);
     if (playerSelection === computerSelection){
-        return "Tie! You both selected " + playerSelection;
+        //return "Tie! You both selected " + playerSelection;
+        console.log("Tie! You both selected " + playerSelection);
     }
     else if(playerSelection === "scissors" && computerSelection == "rock" || 
             playerSelection === "rock" && computerSelection == "paper" ||
             playerSelection === "paper" && computerSelection == "scissors"){
-        return "You Lose! " + computerSelection + " beats " + playerSelection;
+        //return "You Lose! " + computerSelection + " beats " + playerSelection;
+        console.log("You Lose! " + computerSelection + " beats " + playerSelection);
     } else {
-        return "You Win! " + playerSelection + " beats " + computerSelection;
+        //return "You Win! " + playerSelection + " beats " + computerSelection;
+        console.log("You Win! " + playerSelection + " beats " + computerSelection);
     }
 }
 
-function playGame(playerSelection, computerSelection){
-    
-    //start from 0 games played
-    //play round
-    //check if win/lose
-    //add 1 game to win/lose
-    //add 1 to total
-    //when 5 games total - end 
-    //let totalGamesPlayed = 0;
+/* function playGame(playerSelection, computerSelection){
+   
     let wonGames = 0;
     let tiedGames = 0;
     let lostGames = 0;
@@ -61,7 +82,7 @@ function playGame(playerSelection, computerSelection){
     }
     
 
-}
+} */
 
 getComputerChoice();
 
@@ -70,4 +91,4 @@ getComputerChoice();
 
 // console.log(playRound(playerSelection, computerSelection));
 
-playGame();
+//playGame();

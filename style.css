@@ -1,10 +1,39 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+button {
+    background-color: darkblue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+#reset {
+    
+}
+
+.choices{
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
 .results {
     background-color: lightblue;
     font-size: 18px;
     padding: 30px;
-    margin-top: 30px;
+    margin-top: 20px;
+    color: white;
 }
 
-.results h1{
-    color: white;
+.scorecard{
+    display:flex;
+    justify-content: space-around;
+    font-size: 18px;
+    font-weight: 800;
+    border: white solid;
+    padding: 30px;
+
 }

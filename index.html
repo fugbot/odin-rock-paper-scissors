@@ -3,17 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock, Paper, Scissors Showdown</title>
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <button class="rock">Rock</button>
-    <button class="paper">Paper</button>
-    <button class="scissors">Scissors</button>
+    <h1>Rock Paper Scissors Showdown</h1>
+    <div class="choices">
+        <button id="rock" class="choice">Rock</button>
+        <button id="paper" class="choice">Paper</button>
+        <button id="scissors" class="choice">Scissors</button>
+    </div>
 
+    <button id="reset">Reset</button>
+    
     <div class="results">
-        <h1>Results</h1>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam molestias natus cumque debitis error laboriosam sint explicabo ad corrupti iste exercitationem amet molestiae, numquam a itaque commodi quia ipsa officiis.</div>
+        <h2>Results</h2>
+        <div class="scorecard">
+            <div class="winScore">Wins</div>
+            <div class="loseScore">Loses</div>
+            <div class="tieScore">Ties</div>
+            <div class="gameScore">Total Games Played</div>
+        </div>
+        <h3>Round Result</h2>
+        <ul class="resultsList"></ul>        
+    </div>
+
 </body>
 </html>
